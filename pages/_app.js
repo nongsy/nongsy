@@ -1,4 +1,3 @@
-import Layout from "@/src/component/Layout";
 import "@/styles/globals.css";
 import "semantic-ui-css/semantic.min.css";
 
@@ -6,11 +5,7 @@ import "semantic-ui-css/semantic.min.css";
 // 모든 페이지는 이 곳을 통함
 
 export default function App({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+  return <Component {...pageProps} />;
 }
 
 /*
