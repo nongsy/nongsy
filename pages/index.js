@@ -5,12 +5,11 @@ import styles from "@/styles/index.module.css";
 import { list } from "../src/common";
 import { useEffect } from "react";
 import Slide from "@/src/component/Slide";
+import Seo from "@/src/component/Seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  console.log(1111, list);
-
   /*
   useEffect(() => {}, []); // 최초 1회만 데이터 받아오기
   => 데이터 받아오기
@@ -18,9 +17,7 @@ export default function Home() {
   */
   return (
     <div>
-      <Head>
-        <title>Nongsy | Main</title>
-      </Head>
+      <Seo title="Main" />
       <div className={styles.container}>
         <div>
           <div className={styles.main}>

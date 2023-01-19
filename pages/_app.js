@@ -1,5 +1,4 @@
-import Footer from "@/src/component/Footer";
-import Top from "@/src/component/Top";
+import Layout from "@/src/component/Layout";
 import "@/styles/globals.css";
 import "semantic-ui-css/semantic.min.css";
 
@@ -8,11 +7,9 @@ import "semantic-ui-css/semantic.min.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <div>
-      <Top />
+    <Layout>
       <Component {...pageProps} />
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 
