@@ -4,10 +4,10 @@ import { Inter } from "@next/font/google";
 
 import { list } from "../src/common";
 import { useEffect } from "react";
-import Slide from "@/src/component/Slide";
 import Seo from "@/src/component/Seo";
 
 import NavBar from "@/src/component/NavBar";
+import List from "../src/component/List";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,20 +20,28 @@ export default function Home() {
 
   return (
     <>
+      <Seo />
       <NavBar />
       <div className="wrapper">
         <div className="wrapperChildren">
-          <div className="content">
+          <div className="intro">
             <strong>농산물 시세를 한 눈에 확인해보이소~</strong>
             <p>정육부터 수산물까지!</p>
             <p>농시와 함께 알뜰한 장보이소~</p>
+          </div>
+          <div className="categoryBox">
+            <div className="mainCategory">A</div>
+            <div className="subCategory">B</div>
+          </div>
+          <div>
+            <List list={list} />
           </div>
         </div>
       </div>
 
       <style jsx>{`
         .wrapper {
-          background-color: tomato;
+          border: 1px solid red;
         }
 
         .wrapperChildren {
@@ -42,8 +50,16 @@ export default function Home() {
           text-align: center;
         }
 
-        .content {
+        .intro {
           margin-top: 30px;
+          border: 1px solid red;
+        }
+        .categoryBox {
+          display: flex;
+        }
+        .categoryBox div {
+          border: 1px solid red;
+          width: 50%;
         }
       `}</style>
     </>
