@@ -1,0 +1,31 @@
+.container {
+  border: 1px solid red;
+  min-width: 800px;
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container > div {
+  width: 100%;
+  height: 80%;
+}
+.menu {
+  min-width: 800px;
+  height: 80px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+.menu .item {
+  background-color: gold;
+  text-align: center;
+  line-height: 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 25px;
+}
