@@ -17,10 +17,8 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   useEffect(() => {
     (async () => {
-      const sample = await axios(
-        "/service/price/xml.do?action=yearlySalesList&p_yyyy=2022&p_itemcategorycode=100&p_itemcode=111&p_kindcode=01&p_graderank=1&p_countycode=1101&p_convert_kg_yn=N&p_cert_key=111&p_cert_id=222&p_returntype=json"
-      );
-      console.log(sample);
+      const sample = await axios("/api/hello");
+      console.log(2121, sample.data.data.price);
     })();
   }, []); // 최초 1회만 데이터 받아오기
   // => 데이터 받아오기
