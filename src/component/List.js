@@ -1,26 +1,20 @@
-export default function List({ list }) {
+export default function List({ data, onClick }) {
+  console.log(onClick);
   return (
-    <>
-      <div className="wrapper">
-        {list?.map((e) => (
-          <div key={e.id} className="listBox">
-            <div></div>
-            <div>{e.name}</div>
-            <div></div>
-          </div>
-        ))}
+    <div>
+      <div onClick={onClick} className="listBox">
+        <div>{data?.id}</div>
+        <div>{data?.name}</div>
+        <div>{data?.price}</div>
       </div>
       <style jsx>
         {`
-          .wrapper {
-            border: 1px solid red;
-          }
           .listBox {
             border: 1px solid red;
             width: 300px;
           }
         `}
       </style>
-    </>
+    </div>
   );
 }

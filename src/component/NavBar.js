@@ -1,10 +1,13 @@
+import Link from "next/link";
 import React from "react";
 export default function NavBar() {
   return (
     <>
       <div className="nav">
         <div className="navWrapper">
-          <div className="navItem">개로고</div>
+          <Link href="/">
+            <div className="navItem">로고</div>
+          </Link>
           <div className="navItem">메뉴1</div>
           <div className="navItem">메뉴2</div>
           <div className="navItem">메뉴3</div>
