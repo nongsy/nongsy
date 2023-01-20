@@ -21,7 +21,6 @@ export default function Home() {
   return (
     <>
       <Seo />
-      <NavBar />
       <div className="wrapper">
         <div className="wrapperChildren">
           <div className="intro">
@@ -39,17 +38,9 @@ export default function Home() {
         </div>
       </div>
 
+
+
       <style jsx>{`
-        .wrapper {
-          border: 1px solid red;
-        }
-
-        .wrapperChildren {
-          width: 1000px;
-          margin: 0 auto;
-          text-align: center;
-        }
-
         .intro {
           margin-top: 30px;
           border: 1px solid red;
@@ -59,7 +50,8 @@ export default function Home() {
         }
         .categoryBox div {
           border: 1px solid red;
-          width: 50%;
+
+          width: 100%;
         }
       `}</style>
     </>

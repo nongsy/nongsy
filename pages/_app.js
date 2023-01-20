@@ -1,3 +1,5 @@
+import Layout from "@/src/component/Layout";
+import NavBar from "@/src/component/NavBar";
 import "@/styles/globals.css";
 import "semantic-ui-css/semantic.min.css";
 
@@ -5,7 +7,14 @@ import "semantic-ui-css/semantic.min.css";
 // 모든 페이지는 이 곳을 통함
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <NavBar />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
 }
 
 /*
