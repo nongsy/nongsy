@@ -1,5 +1,4 @@
 export default function List({ data, onClick }) {
-  console.log(onClick);
   return (
     <div>
       <div onClick={onClick} className="listBox">
